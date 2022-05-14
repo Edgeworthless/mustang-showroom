@@ -1,6 +1,6 @@
 body {
   margin: 0;
-  font-family: 'BD Montoya';
+  font-family: 'BD Montoya Thin';
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
 }
@@ -10,9 +10,8 @@ body {
   src: url("/public/bd_megatoya_thin-webfont.woff") format("woff");
 }
 
-#scene-container {
-  position: relative;
-
+#canvas-container {
+  position: fixed;
 }
 
 .gui {
@@ -43,7 +42,6 @@ body {
 }
 
 .footer {
-  position: absolute;
   left: 0px;
   bottom: 0px;
   margin: 7vh;
@@ -51,17 +49,26 @@ body {
   font-family:"BD Montoya Thin";
 }
 
+.first-section {
+  height: 100vh;
+}
+
+.second-section {
+  height: 100vh;
+}
+.third-section {
+  height: 100vh;
+}
+
 .header {
-  position: absolute;
-  left: 0px;
-  top:0px;
   margin: 7vh;
   color:white;
 }
 
 .full {
   position: relative;
-  width: 100%;
-  height: 100%;
+  width: 100vh;
+  height: 100vh;
   background-color: "#290000";
+  overflow-y: scroll;
 }

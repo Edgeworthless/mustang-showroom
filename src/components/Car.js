@@ -1,43 +1,37 @@
-import React, { Suspense, useEffect, useMemo, useRef, useState } from "react";
+import React, {
+  forwardRef,
+  Suspense,
+  useEffect,
+  useMemo,
+  useRef,
+  useState,
+} from "react";
 import { useLoader } from "@react-three/fiber";
 import { GLTFLoader } from "three/examples/jsm/loaders/GLTFLoader";
 import { TextureLoader } from "three";
 import { useSpring, animated } from "@react-spring/three";
 
-export default function Car({ ...props }) {
+export const Car = forwardRef(({ ...props }, ref) => {
   const defaultTexture = useLoader(
     TextureLoader,
     "/textures/Body_baseColor.png"
   );
-  const yellowTexture = useLoader(
-    TextureLoader,
-    "/textures/Body_baseColor2.png"
-  );
 
-  const [isOpened, open] = useState(true);
   const [bodyTexture, setTexture] = useState(defaultTexture);
-  const group = useRef();
   const { nodes, materials } = useLoader(GLTFLoader, "/scene.gltf");
 
+  //Starting animation
   const { position } = useSpring({
     to: {
-      position: [-5, 0, -2],
+      position: [-3, 0, -40],
     },
     from: { position: [-100, 0, -200] },
     config: { mass: 5, tension: 500, friction: 150 },
   });
 
-  const { rotation } = useSpring({
-    to: {
-      rotation: [Math.PI, 0, 0],
-    },
-    from: { rotation: [0, 0, 0] },
-    config: { mass: 5, tension: 0, friction: 0 },
-  });
-
   return (
-    <group ref={group} {...props} dispose={null}>
-      <animated.group position={position} rotation={[-Math.PI, -0.5, 0]}>
+    <group {...props} dispose={null}>
+      <animated.group ref={ref} rotation={[-Math.PI, -0.5, 0]} position={position}>
         <mesh geometry={nodes.Object_2.geometry} material={materials.Black} />
         <mesh
           geometry={nodes.Object_3.geometry}
@@ -67,6 +61,7 @@ export default function Car({ ...props }) {
         <mesh geometry={nodes.Object_9.geometry} material={materials.Chrome} />
         <mesh geometry={nodes.Object_10.geometry} material={materials.Cobra} />
         <mesh
+          material-color="black"
           geometry={nodes.Object_11.geometry}
           material={materials.Dessous}
         />
@@ -209,11 +204,7 @@ export default function Car({ ...props }) {
           geometry={nodes.Object_51.geometry}
           material={materials.Plastique_red}
         />
-        <mesh
-          geometry={nodes.Object_52.geometry}
-          material={materials.Pneu}
-          rotation={rotation}
-        />
+        <mesh geometry={nodes.Object_52.geometry} material={materials.Pneu} />
         <mesh geometry={nodes.Object_53.geometry} material={materials.Shelby} />
         <mesh geometry={nodes.Object_54.geometry} material={materials.Vitre} />
         <mesh
@@ -223,4 +214,4 @@ export default function Car({ ...props }) {
       </animated.group>
     </group>
   );
-}
+});
