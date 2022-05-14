@@ -1,0 +1,16 @@
+{
+  "files": {
+    "main.css": "/mustang-showroom/static/css/main.1564acab.css",
+    "main.js": "/mustang-showroom/static/js/main.b673d671.js",
+    "static/js/787.a14730d1.chunk.js": "/mustang-showroom/static/js/787.a14730d1.chunk.js",
+    "static/media/bd_megatoya_thin-webfont.woff": "/mustang-showroom/static/media/bd_megatoya_thin-webfont.0e337e55fcaaad490b90.woff",
+    "index.html": "/mustang-showroom/index.html",
+    "main.1564acab.css.map": "/mustang-showroom/static/css/main.1564acab.css.map",
+    "main.b673d671.js.map": "/mustang-showroom/static/js/main.b673d671.js.map",
+    "787.a14730d1.chunk.js.map": "/mustang-showroom/static/js/787.a14730d1.chunk.js.map"
+  },
+  "entrypoints": [
+    "static/css/main.1564acab.css",
+    "static/js/main.b673d671.js"
+  ]
+}
