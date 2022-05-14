@@ -1,21 +1,7 @@
-import { Canvas, useThree, useFrame } from "@react-three/fiber";
-import * as THREE from "three";
-import CameraController from "./components/CameraController";
-import Car from "./components/Car";
-import { withControls } from "react-three-gui";
-import { useSpring, animated } from "@react-spring/three";
+import { Canvas } from "@react-three/fiber";
 import {
-  BakeShadows,
-  ContactShadows,
-  Environment,
-  Float,
-  Lightformer,
-  Scroll,
   ScrollControls,
-  useScroll,
 } from "@react-three/drei";
-import { LayerMaterial, Base, Depth, Color, DebugLayerMaterial } from "lamina";
-import { useEffect, useRef, useState } from "react";
 import Scene from "./components/Scene";
 
 export default function App() {

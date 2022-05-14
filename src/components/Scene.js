@@ -1,4 +1,4 @@
-import { useThree, useFrame } from "@react-three/fiber";
+import { useFrame } from "@react-three/fiber";
 import * as THREE from "three";
 import { Car } from "./Car";
 import {
@@ -10,7 +10,7 @@ import {
   Scroll,
   useScroll,
 } from "@react-three/drei";
-import { LayerMaterial, Base, Depth, Color, DebugLayerMaterial } from "lamina";
+import { LayerMaterial, Depth } from "lamina";
 import { useRef, useState } from "react";
 
 export default function Scene({ ...props }) {

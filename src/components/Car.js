@@ -1,9 +1,5 @@
 import React, {
   forwardRef,
-  Suspense,
-  useEffect,
-  useMemo,
-  useRef,
   useState,
 } from "react";
 import { useLoader } from "@react-three/fiber";
