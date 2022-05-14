@@ -10,11 +10,11 @@ import { useSpring, animated } from "@react-spring/three";
 export const Car = forwardRef(({ ...props }, ref) => {
   const defaultTexture = useLoader(
     TextureLoader,
-    "/textures/Body_baseColor.png"
+    "%PUBLIC_URL%/textures/Body_baseColor.png"
   );
 
   const [bodyTexture, setTexture] = useState(defaultTexture);
-  const { nodes, materials } = useLoader(GLTFLoader, "/scene.gltf");
+  const { nodes, materials } = useLoader(GLTFLoader, "%PUBLIC_URL%/scene.gltf");
 
   //Starting animation
   const { position } = useSpring({
