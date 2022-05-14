@@ -224,7 +224,7 @@ export default function Scene({ ...props }) {
       <BakeShadows />
       <Scroll html style={{ width: "100%" }}>
         <div className="header">
-          <img src="%PUBLIC_URL%/ford.png" className="logo" />
+          <img src={`${process.env.PUBLIC_URL}/ford.png`} className="logo" />
         </div>
         <div
           style={{

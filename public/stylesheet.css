@@ -4,8 +4,8 @@
 
 @font-face {
     font-family: 'bd_megatoyathin';
-    src: url('%PUBLIC_URL%/bd_megatoya_thin-webfont.woff2') format('woff2'),
-         url('%PUBLIC_URL%/bd_megatoya_thin-webfont.woff') format('woff');
+    src: url('bd_megatoya_thin-webfont.woff2') format('woff2'),
+         url('bd_megatoya_thin-webfont.woff') format('woff');
     font-weight: normal;
     font-style: normal;
 

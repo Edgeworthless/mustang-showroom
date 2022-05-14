@@ -7,7 +7,7 @@ body {
 
 @font-face {
   font-family: "BD Montoya Thin";
-  src: url("%PUBLIC_URL%/bd_megatoya_thin-webfont.woff") format("woff");
+  src: url("/public/bd_megatoya_thin-webfont.woff") format("woff");
 }
 
 #canvas-container {
